@@ -1,5 +1,3 @@
-import {TodoModel} from '../services/TodoModel';
-
 let Utils = {
   guid: function () {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(
@@ -14,12 +12,6 @@ let Utils = {
 
   move: function (array: any, fromIndex: any, toIndex: any) {
     return array.splice(toIndex, 0, array.splice(fromIndex, 1)[0]);
-  },
-
-  findTodo: function (todo: TodoModel, todoList: any) {
-    return todoList.find(
-      item => item.title.toLowerCase() === todo.title.toLowerCase(),
-    );
   },
 };
 

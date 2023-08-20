@@ -1,11 +1,11 @@
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 
 import Home from '@/pages/Home';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-import Scan from '@/assets/Scan.svg';
+import Icon from '@/assets';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -31,10 +31,10 @@ const renderTabIcon = (route: any) => {
 
   switch (route.name) {
     case 'Add':
-      TabIcon = <Scan height={30} width={30} />;
+      TabIcon = <Icon.Scan height={30} width={30} />;
       break;
     default:
-      TabIcon = <Scan height={30} width={30} />;
+      TabIcon = <Icon.Scan height={30} width={30} />;
       break;
   }
 
